@@ -1,0 +1,15 @@
+{
+  "name": "caveman",
+  "displayName": "Caveman Mode",
+  "version": "1.0.0",
+  "description": "Compressed caveman-speak responses: same technical quality, ~75% fewer output tokens. Skill + command + agent + output style.",
+  "author": {
+    "name": "liusc45",
+    "url": "https://github.com/liusc45"
+  },
+  "homepage": "https://github.com/liusc45/caveman-claude",
+  "repository": "https://github.com/liusc45/caveman-claude",
+  "license": "MIT",
+  "keywords": ["tokens", "compression", "brevity", "caveman", "output-style"],
+  "outputStyles": "./output-styles/"
+}

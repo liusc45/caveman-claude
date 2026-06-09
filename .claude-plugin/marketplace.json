@@ -1,0 +1,18 @@
+{
+  "name": "caveman-claude",
+  "owner": {
+    "name": "liusc45",
+    "url": "https://github.com/liusc45"
+  },
+  "plugins": [
+    {
+      "name": "caveman",
+      "source": "./",
+      "description": "Caveman-speak compressed responses: same technical quality, ~75% fewer output tokens",
+      "version": "1.0.0",
+      "author": {
+        "name": "liusc45"
+      }
+    }
+  ]
+}
