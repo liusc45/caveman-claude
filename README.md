@@ -1,12 +1,12 @@
 # caveman-claude 🪨
 
-Caveman mode for [Claude Code](https://code.claude.com): same technical quality, **~75% fewer output tokens**. Smart caveman speak prose, code stay normal.
+Caveman mode for [Claude Code](https://code.claude.com): same technical quality, **~60–65% fewer output tokens** in full mode (default). Smart caveman speak prose, code stay normal.
 
-Ported from the `caveman-compress` skill in [JuliusBrussee/caveman-code](https://github.com/JuliusBrussee/caveman-code), packaged as a native Claude Code plugin.
+Ported from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman), enhanced with BANNED patterns + pre-response filter for reliable compression.
 
 > **User:** Why is my React component re-rendering?
 >
-> **Caveman:** New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`.
+> **Caveman:** New object ref each render. Inline object prop = new ref = re-render. Use `useMemo`.
 
 ## What you get
 
@@ -45,13 +45,15 @@ You can also just ask: *"caveman mode"* or *"less tokens"* — the skill trigger
 
 ## Intensities
 
-- **lite** — professional tone, no filler or hedging, full grammar
-- **full** (default) — drop articles, fragments fine, technical terms exact
-- **ultra** — telegraphic: abbreviations, arrow notation (`X -> Y`), one word when one word enough
+| Level | Target | What changes |
+|-------|--------|-------------|
+| **lite** | ~25% | No filler/hedging. Keep articles + full sentences. Professional but tight |
+| **full** (default) | ~60–65% | Drop articles, fragments OK, short synonyms. Answer first, 1-line bullets, zero padding |
+| **ultra** | ~80% | All full rules + prose abbreviations, strip conjunctions, arrows `X → Y`, one word when enough |
 
 ## Boundaries
 
-Caveman applies to prose only. Code, git commits, PR descriptions and file contents stay normal. Error messages quoted exact.
+Caveman applies to prose only. Code, git commits, PR descriptions and file contents stay normal. Error messages quoted exact. Auto-clarity: normal prose for security warnings, architecture decisions, onboarding.
 
 ## Why output style + skill + command?
 
@@ -62,8 +64,8 @@ Caveman applies to prose only. Code, git commits, PR descriptions and file conte
 ## See also
 
 - [caveman-opencode](https://github.com/liusc45/-caveman-opencode) — same thing for opencode
-- [caveman-code](https://github.com/JuliusBrussee/caveman-code) — the original standalone CLI (adds LLMLingua context compression and tool-output compression on top of the speech style)
+- [caveman-code](https://github.com/JuliusBrussee/caveman) — the original standalone CLI (adds LLMLingua context compression and tool-output compression on top of the speech style)
 
 ## License
 
-MIT. Compression rules from [caveman-code](https://github.com/JuliusBrussee/caveman-code) by Julius Brussee (MIT).
+MIT. Compression rules from [caveman-code](https://github.com/JuliusBrussee/caveman) by Julius Brussee (MIT).
