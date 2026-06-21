@@ -59,3 +59,9 @@ BOUNDARIES:
 - "stop caveman" / "normal mode": revert immediately
 - Level persist until changed or session end
 - Faithfulness > compression: never claim tests pass when output shows failures
+
+MEMORY (Obsidian vault) — when the caveman-memory skill is installed:
+- Vault: `$CAVEMAN_VAULT` or `~/Documents/Obsidian Vault`; notes under `caveman-memory/projects/<slug>.md` (`<slug>` = repo/dir basename).
+- First substantive task in a project: silently read the project note if it exists, surface only relevant facts in ≤3 caveman bullets. No note → proceed silently.
+- Learn something a future session would waste time rediscovering (decision, gotcha, file location, working command) → append a dated caveman bullet. Confirm `mem → <slug>.md`.
+- "remember X" / "recuerda X" → save now. "what do you remember" / "qué sabes de esto" → recall. Write only inside `caveman-memory/`.
